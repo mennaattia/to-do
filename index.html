@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="main.css">
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/4c61152f48.js" crossorigin="anonymous"></script>
+
+    <title>To-do</title>
+  </head>
+  <body>
+    <!-- Spinner Starts Here -->
+    <div class="spinnerBG">
+        <div class="spinners">
+            <div class="spinner-grow text-info" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-info" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-info" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+    </div>
+    <!-- Spinner Ends Here -->
+    <!-- Light/Dark Mode Starts Here -->
+    <i class="fas fa-moon" id="modes"></i>
+    <!-- Light/Dark Mode Ends Here -->
+    <!-- Thumbnail Starts Here -->
+    <div class="thumbnailBG displayNone">
+      <div>
+        <img src="" class="img-fluid thumbnailSrc">
+      </div>
+    </div>
+    <!-- Thumnail Ends Here -->
+    <!-- Accordion Starts Here -->
+    <div class="accBG displayNone">
+      <!-- one -->
+      <div class="accordion">
+        <button class="accBtn">What is procrastination?</button>
+        <div class="accItem">
+          <p>Procrastination is the act of delaying or putting off tasks until the last minute, or past their deadline. Some researchers define procrastination as a "form of self-regulation failure characterized by the irrational delay of tasks despite potentially negative consequences." The reality is that if you wait until you're in the right frame of mind to do certain tasks (especially undesirable ones), you will probably find that the right time simply never comes along and the task never gets completed.</p>
+        </div>
+      </div>
+      <!-- two -->
+      <div class="accordion">
+        <button class="accBtn">What causes procrastination?</button>
+        <div class="accItem">
+          <p>
+            According to researchers, there are some major cognitive distortions that lead to academic procrastination. Students tend to:
+            <br>
+            <ul style="margin-left: 2%;">
+              <li>Overestimate how much time they have left to perform tasks.</li>
+              <li>Overestimate how motivated they will be in the future.</li>
+              <li>Underestimate how long certain activities will take to complete.</li>
+              <li>Mistakenly assume that they need to be in the right frame of mind to work on a project.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <!-- three -->
+      <div class="accordion">
+        <button class="accBtn">How to overcome procrastination?</button>
+        <div class="accItem">
+          <p>
+              Fortunately, there are a number of different things one can do to fight procrastination and start getting things done on time. Consider these as procrastination exercises:
+              <br>
+              <ul style="margin-left: 2%;">
+                <li><strong>Make a to-do list:</strong> To help keep you on track, consider placing a due date next to each item.</li>
+                <li><strong>Take baby steps:</strong> Break down the items on your list into small, manageable steps so that your tasks don’t seem so overwhelming.</li>
+                <li><strong>Recognize the warning signs:</strong> Pay attention to any thoughts of procrastination and do your best to resist the urge. If you begin to think about procrastinating, force yourself to spend a few minutes working on your task.</li>
+                <li><strong>Pat yourself on the back:</strong> When you finish an item on your to-do list on time, congratulate yourself and reward yourself by indulging in something you find fun.</li>
+              </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Accordion Ends Here -->
+    <!-- Layout Starts Here -->
+    <!-- Layout Ends Here -->
+    <div class="container">
+      <div class="row logo">
+        <div class="col-12">
+          <img src="Images/TodosLogo.png">
+        </div>
+      </div>
+      <div class="row greeting">
+        <div class="col-12 text">
+          
+        </div>
+      </div>
+    </div>
+    <div class="todo">
+      <div class="form-group">
+        <div class="form-group col-md-5 inputsDiv">
+          <label>What are you doing?</label>
+          <input type="text" class="form-control inputItem" placeholder="✍️ Add item...">
+        </div>
+        <div class="form-group col-md-5 inputsDiv">
+          <label>When should it be due?</label>
+          <input type="date" class="form-control inputDate" placeholder="📆 Add date...">
+        </div>
+        <div class="form-group col-md-5 inputsDiv">
+          <label>Add a demonstrative image to stay focused!</label>
+          <input type="text" class="form-control inputImage" placeholder="📷 Add image...">
+        </div>
+        <div class="buttons inputsDiv col-md-5" style="text-align: center;">
+          <button type="button" class="btn col-7" id="add" style="background-color: #00ba44; color: #fff;">Add ➕</button>
+          <button type="button" class="btn col-4" id="clearAll" style="background-color: #e92c2c; color: #fff;">Clear All</button>
+        </div>
+        <ul class="tasks col-md-5 inputsDiv displayNone">
+        </ul>
+      </div>
+    </div>
+    <!-- Footer Starts Here -->
+    <p style="position: absolute; bottom: 0; left: 1%; cursor: pointer;" id="footer">🛑 Do you need help?</p>
+    <!-- Footer Ends Here -->
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  </body>
+</html>
